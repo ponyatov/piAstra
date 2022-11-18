@@ -1,0 +1,3 @@
+git make curl
+code doxygen clang-format
+debootstrap squid-deb-proxy

@@ -1,0 +1,65 @@
+{
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.f11",
+            "sequence": [
+                "workbench.action.files.saveAll",
+                {"command": "workbench.action.terminal.sendSequence",
+                    "args": {"text": "\u000D clear ; make format doxy \u000D"}}]
+        },
+        {
+            "command": "multiCommand.f12",
+            "sequence": [
+                "workbench.action.files.saveAll",
+                {"command": "workbench.action.terminal.sendSequence",
+                    "args": {"text": "\u000D clear ; make all \u000D"}}]
+        },
+    ],
+
+    // files
+    "files.exclude": {
+        "docs":true,
+    },
+    "files.associations": {
+    },
+    
+    // editor
+    "editor.tabSize": 4,
+    "editor.rulers": [80],
+    "workbench.tree.indent": 16,
+    "git.ignoreLimitWarning": true,
+    "git.enabled": false,
+
+	// msys
+	// "terminal.integrated.shell.windows": "C:\\msys64\\usr\\bin\\bash.exe",
+	// "terminal.integrated.shellArgs.windows": ["--login", "-i"],
+	// "terminal.integrated.env.windows": {"MSYSTEM":"MINGW64", "CHERE_INVOKING":"1"},
+    "terminal.integrated.profiles.windows": {
+        "msys64": {
+            "path": ["C:\\msys64\\usr\\bin\\bash.exe"],
+            "args": ["--login", "-i"],
+            "env":  {"MSYSTEM":"MINGW64", "CHERE_INVOKING":"1"}
+        }
+    },
+    "terminal.integrated.profiles.linux": {
+        "bash":{
+            "path": ["/bin/bash"],
+            "args": []
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "msys64",
+    "terminal.integrated.defaultProfile.linux":   "bash",
+
+    // cmake
+    "cmake.buildDirectory": "${workspaceFolder}/tmp/cmake",
+    "cmake.installPrefix": "${workspaceFolder}/bin",
+
+    // clang-format
+    "clang-format.executable": "clang-format",
+    "clang-format.fallbackStyle": "Google",
+    "clang-format.style": "file",
+    "[cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+}
