@@ -5,14 +5,14 @@
             "sequence": [
                 "workbench.action.files.saveAll",
                 {"command": "workbench.action.terminal.sendSequence",
-                    "args": {"text": "\u000D clear ; make format doxy \u000D"}}]
+                    "args": {"text": "\u000D clear ; make format doc \u000D"}}]
         },
         {
             "command": "multiCommand.f12",
             "sequence": [
                 "workbench.action.files.saveAll",
                 {"command": "workbench.action.terminal.sendSequence",
-                    "args": {"text": "\u000D clear ; make all \u000D"}}]
+                    "args": {"text": "\u000D clear ; make deb \u000D"}}]
         },
     ],
 
