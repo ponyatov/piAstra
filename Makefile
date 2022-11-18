@@ -69,3 +69,17 @@ dev:
 	git checkout shadow -- $(MERGE)
 	$(MAKE) doc
 #	$(MAKE) doxy ; git add -f docs
+
+shadow:
+	git push -v
+	git checkout $@
+	git pull -v
+
+release:
+	git tag $(NOW)-$(REL)
+	git push -v --tags
+	$(MAKE) shadow
+
+ZIP = tmp/$(MODULE)_$(NOW)_$(REL)_$(BRANCH).zip
+zip:
+	git archive --format zip --output $(ZIP) HEAD
